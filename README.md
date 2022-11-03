@@ -10,7 +10,7 @@ cd catkin_ws/src
 ```
 After that clone the repo to your src
 ```bash
-git clone https://github.com/misramrinal/vacbot.git
+git clone https://github.com/Wolfrang1711/vacbot.git
 ```
 After cloning, source and build the package
 ```bash
