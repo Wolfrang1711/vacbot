@@ -4,7 +4,7 @@ from pynput.keyboard import Key, Listener, KeyCode
 import rospy
 from geometry_msgs.msg import Twist
 
-rospy.init_node('teleop', anonymous=True) 
+rospy.init_node('robot_teleop', anonymous=True) 
 pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10) 
 rate = rospy.Rate(10) 
 move = Twist()
@@ -41,8 +41,6 @@ def on_release(key):
         if key == Key.esc:
             print("quit on esc")
             return False 
-
-
 
 listener = Listener(on_press=on_press, on_release=on_release, suppress=False)
 listener.start()
