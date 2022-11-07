@@ -20,16 +20,16 @@ catkin build
 ## Launching
 ### In order to launch the package, first launch the gazebo simulation
 ```bash
-roslaunch vacbot rough.launch
+roslaunch vacbot robot_gazebo.launch
 ```
-Then launch
-```bash
-roslaunch vacbot robot_slam.launch
-```
-This will launch Rviz, which will alllow you to visualise the laserscan and the map obtained
-
 Then run the following script which will allow you to teleop the bot and generate the entire map of the world
 ```bash
-rosrun vacbot turtlebot3_teleop.py
+rosrun vacbot robot_teleop.py
 ```
 Now move the bot using W,A,S,D keys and see the bot generate a beautifull map of the world.
+
+Else you can launch
+```bash
+roslaunch vacbot robot_offline_nav.launch
+```
+This will launch Rviz, where you can give 2D goal points to the bot and make it move to the specified point using move-base.
