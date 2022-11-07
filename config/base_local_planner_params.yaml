@@ -1,34 +1,33 @@
 # controller_frequency: 5.0
 oscillation_timeout: 30.0
 oscillation_distance: 0.5
-planner_patience: 1.0
-controller_patience: 1.0 
+planner_patience: 5.0
+controller_patience: 10.0 
 
 TrajectoryPlannerROS:
-  max_vel_x: 0.15
+  max_vel_x: 1.0
   min_vel_x: 0.05
   max_vel_theta: 0.7
   min_vel_theta: -0.7
   min_in_place_vel_theta: 0.25
 
-  sim_time: 2.0
-  vx_samples: 5
+  sim_time: 0.8
+  vx_samples: 18
+  vtheta_samples: 20
+  sim_granularity: 0.05 
 
-  acc_lim_theta: 2.5
-  acc_lim_x: 2.5
-  acc_lim_y: 2.5
+  acc_lim_theta: 0.6
+  acc_lim_x: 2.0
+  acc_lim_y: 0.0
 
-  path_distance_bias: 2
-  goal_distance_bias: 1
+  path_distance_bias: 0.8
+  goal_distance_bias: 0.6
 
   holonomic_robot: false
   meter_scoring: true
 
   xy_goal_tolerance: 0.15
-  yaw_goal_tolerance: 0.25
-
-  recovery_behavior_enabled: false
-  clearing_rotation_allowed: false
+  yaw_goal_tolerance: 0.05
 
 DWAPlannerROS:
   max_vel_x: 0.55  
@@ -51,7 +50,9 @@ DWAPlannerROS:
   yaw_goal_tolerance: 0.25 
   xy_goal_tolerance: 0.15 
 
-  sim_time: 2.0     
-  vx_samples: 5  
+  sim_time: 0.8
+  vx_samples: 18
+  vtheta_samples: 20
+  sim_granularity: 0.05 
 
   path_distance_bias: 64.0
