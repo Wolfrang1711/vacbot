@@ -6,6 +6,7 @@ local_costmap:
   rolling_window: true
   inflation_layer:
     inflation_radius: 0.3
+  static_map: false  
   plugins:
     - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
     - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
