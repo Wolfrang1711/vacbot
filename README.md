@@ -1,5 +1,5 @@
 # Vacbot
-## A bot which uses LIDAR and designed to map the environment using GMapping
+## The LIDAR Mapping Bot with GMapping is a robotic system designed to map its environment using LIDAR (Light Detection and Ranging) sensors and the GMapping (Grid-based FastSLAM) and Movebase algorithms. This project provides a comprehensive guide on how to build, deploy, and operate a robot equipped with LIDAR for mapping and navigation purpose.
 
 ## Installation
 ### In order to use this package, go through the following steps:
