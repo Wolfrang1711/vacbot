@@ -34,8 +34,13 @@ roslaunch vacbot robot_online_nav.launch
 ```
 This will launch Rviz, which will allow you to visualize the bot in the world and map its surroundings dynamically.
 
-Then run the following script which will allow you to teleop the bot and generate the entire map of the world
+For teleoperation of bot to navigate and map surroundings manually
 ```bash
-rosrun vacbot turtlebot3_teleop.py
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
-Now move the bot using W,A,S,D keys and see the bot generate a beautifull map of the world.
+Now move the bot using  W,A,S,D keys and see the bot generate a beautiful map of the world.
+
+For autonomous exploration of bot using RRT algorithm to map its surroundings
+```bash
+rosrun vacbot robot_rrt_explore.py
+```
